@@ -1,0 +1,12 @@
+Content-type
+1) application/x-www-form-urlencoded
+=> QueryString(질의문자열) : key=value&key=value&...
+=> req.query 속성에 값을 넣어야됨 : GET 방식이라면
+=> req.body  속성에 값을 넣어야됨 : POST 방식이라면
+
+2) application/json
+=> JSON : {} or []
+=> req.body 속성
+
+3) pathvariable => X
+=> req.params 속성

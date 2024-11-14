@@ -1,0 +1,51 @@
+node - LTS버전으로 중간에 auto 인스톨 해주는거 선택
+권한 무조건 '예'로
+
+
+기본 터미널 - 파워셀 , 낮은 프로그램이라서 기본 cmd로 변경해야됨
+ -> 보기 - 명령팔레트 - terminal default - 첫번째꺼 - 제일 위에꺼 선택
+
+권한이 제대로 설정되어 있지 않으면 버전이 안나옴 그래서 터미널 반드시 실행해봐야됨
+node -v
+npm -v
+
+깃추가작업해야됨
+
+
+var - 호이스팅 -처음에 undefined로 초기화
+
+let, const - 호이스팅, 다만 초기화는 안됨
+
+객체를 const로 선언하면 필드, 메소드를 변경할수 없도록 하기 위해서 선언
+함수는 const로 선언하는 경우가 있음
+
+배열 함수
+sort - 유니코드 기반 정렬 - 문자는 상관x , 숫자는 반드시 별도로 정렬함수로 정렬해야됨
+filter - 불린 타입으로 해당하면 반환, 아니면 패스
+map - 기존의 값에 무언가 primary키를 추가할때, 기존 배열에서 필요없는 값을 뺄 때
+reduce - 모든 배열의 값을 더하거나 할때 누적값을 가져올때 - 얘 말고도 그냥 가능해서 잘 안씀
+
+Console
+Timer
+Process
+OS
+Path - 환경변수 JAVA_HOME
+URL -주소
+Crypto -암호화
+File System -
+
+폴더 npm init (전부다 엔터) - npm install - npm install express
+package.json, package-lock.json  - 제이슨은 단순 데이터라서 절대로 주석 작성 안됨
+
+깃에는 package.json만 업로드, 왜냐면 node모듈은 크기가 너무 크고
+package-lock.json은 버전때문에 충돌나는 경우가 많아서 잘 공유안함.
+
+
+에러메세지
+200~ 성공
+400 날짜 타입 오류
+403 접근 권한이 없어서 포비든
+404 주소오류 URL
+405 메소드 오류 (오타) , 경로는 맞음
+415 Content-type 불일치
+500 쿼리문 오류 - 모든 에러(서버내부)

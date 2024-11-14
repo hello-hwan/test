@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //promise.html
+        // 우리가 쓸 일은 크게 없지만 프로세스는 알아둘것.
+        let timeAsync = new Promise((resolve, reject)=>{ // 프로미스 객체는 반드시 resolve, reject 가 실행되어야 정상적으로 종료됨
+            let result = false;
+
+            setTimeout(()=>{
+                result = true;
+                console.log('비동기 작업 수행');
+
+                if(result){
+                    resolve(`result : 성공`);
+                }else{
+                    reject(new Error(`result : 실패`));
+                }
+
+            }, 2000);
+
+        });
+        // Promise나 then에서 에러나면 catch에서 모두 처리
+        timeAsync
+        .then(result => console.log(result)) 
+        // ajax를 여러번 호출하면 then에서 호출하는 경우가 있다 
+        //    -> 콜백헬 (ajax를 순차적으로 여러번 하게되면 엄청 길어짐)
+        //         -> 비동기인데 동기적으로 작업해야되는경우 Async/Await
+        // then은 promise 작업이 끝나고나서 결과를 기반으로 후속작업을 하겠다
+        // then은 여러번 호출가능
+        .catch( err => console.log(err) );
+        
+        console.log(`작업종료`); //작업이 끝나고나서 위에 timeAsync가 실행되어서 console에 표시됨
+    </script>
+    
+</body>
+</html>

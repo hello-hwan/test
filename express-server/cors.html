@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch('http://192.168.0.5:3000/info',{
+        // cors 강제로 일으키기
+        //fetch('http://localhost:3000/info',{
+            method :'post',
+            // app.use(express.urlencoded({extended :false})); middleApp.js 얘때문에 아래쪽body를 URL~~로 쓰는거임
+            // application/x-www-form-urlencoded 이 타입은 이렇게 변경함
+            body : new URLSearchParams({search:'yedam'})
+        })
+        .then(res=>res.text()) // 서버가 보내준 데이터가 단순 문자열이면 text로 파싱
+        .then(result => console.log(result))
+        .catch(err => console.log(err));
+
+    </script>
+</body>
+</html>

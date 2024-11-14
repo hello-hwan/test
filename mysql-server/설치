@@ -1,0 +1,21 @@
+//npm init 
+//npm install (express, mysql) 두개 설치
+// 이거 하면안됨 npm install nodemon (node monitor 디렉터리, 파일을 감시 -> 변경되면 애플리케이션 재시작)껏다켰다 안해도됨 - 자동 재실행
+//npm install nodemon --save-dev 노드몬을 개발할때만 실행 되도록 하는옵션
+//devDependencies 에 nodemon 설치, 배포할때는 사라짐
+//script에 추가     "dev":"nodemon app.js" // app.js 를 다시 실행하겠다. 단축키 : dev : npm run dev
+//npm update 실행 
+// npm 사이트 mysql -  Performing queries 옵션 // 비동기 작업
+
+순서 
+01. sql // 쿼리문 작성
+// module.exports={
+    customerList // 전체조회 
+};
+
+02. mapper //쿼리문 호출, 커넥션 연결, 실행후에 성공 실패 호출
+// module.exports = {
+    query
+};
+
+03. app 

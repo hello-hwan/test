@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여름방학 특강 신청</title>
+    <style>
+        #container{
+            width: 500px;
+            margin: 0 auto;
+        }
+        form legend{
+            color: blue;
+            font-weight: 700;
+        }
+        form li{
+            list-style: none;
+            margin: 10px;
+        }
+        form{
+            color: #000;
+        }
+        .bt{
+            text-align: center;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>여름방학 특강 신청</h1>
+        <form name="summer" action="#" method="post">
+            <fieldset>
+                <legend>수강과목</legend>
+                <ul>
+                    <li>
+                        <label>영어회화(초급)</label>
+                        <input type="text" value="오전 9:00~11:00" readonly id="eng1" name="eng1">
+                    </li>
+                    <li>
+                        <label for="eng2">관심분야(영어)</label>
+                        <input type="text" id="eng2" name="eng2" list="data">
+                        <datalist id="data">
+                            <option value="grammer">문법</option>
+                            <option value="vaca">어휘</option>
+                            <option value="speaking">회화</option>
+                            <option value="listening">리스닝</option>
+                            <option value="news">뉴스청취</option>
+                        </datalist>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>신청자</legend>
+                <ul>
+                    <li>
+                        <label>아이디</label>
+                        <input type="text" id="u-id" name="u-name">
+                    </li>
+                    <li>
+                        <label>비밀번호</label>
+                        <input type="password" id="pw" name="pw">
+                    </li>
+                    <li>
+                        <label>이름</label>
+                        <input type="text" id="u-name" name="u-name" placeholder="공백없이 입력하세요">
+                    </li>
+                    <li>
+                        <label>학번</label>
+                        <input type="text" id="stdno" name="stuno" maxlength="8" placeholder="8자리학번">
+                    </li>
+                    <li>
+                        <label>학과</label>
+                        <select name="crcl" id="crcl">
+                            <optgroup label="공과대학">
+                                <option value="house">건축공학과</option>
+                                <option value="mchin">기계공학과</option>
+                                <option value="indus">산업공학과</option>
+                                <option value="elec">전지전자공학과</option>
+                                <option value="compu" selected>컴퓨터공학과</option> /*셀렉트 자주 사용*/
+                                <option value="chemi">화학공학과</option>
+                            </optgroup>
+                            <optgroup label="인문대학">
+                                <option value="histo">사학과</option>
+                                <option value="lang">어문학부</option>
+                                <option value="phil">철학과</option>
+                            </optgroup>
+                        </select>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="bt">
+                <button type="submit">완료</button>
+                <button type="reset">취소</button>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
